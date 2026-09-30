@@ -1,0 +1,29 @@
+name: public-fast-check-example
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  fast-check:
+    # Fictional labels for documentation only.
+    # Replace them with labels appropriate to your own environment.
+    runs-on: [self-hosted, windows, x64, lab-fast]
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show immutable target
+        shell: pwsh
+        run: |
+          Write-Output "TARGET_SHA=$env:GITHUB_SHA"
+
+      - name: Example deterministic check
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          Write-Output 'PUBLIC_EXAMPLE_CHECK=PASS'
