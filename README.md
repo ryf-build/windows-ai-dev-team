@@ -4,7 +4,7 @@
 
 A practical public companion for building a disciplined AI-assisted engineering environment on Windows: GitHub, self-hosted runners, automation, QA, and human-controlled execution.
 
-> This repository is intentionally generic. It contains no private product source code, customer data, production credentials, internal endpoints, or proprietary deployment configuration.
+> This repository is intentionally generic. It contains no private product source code, customer data, production credentials, internal endpoints, real infrastructure identifiers, or proprietary deployment configuration.
 
 ## What this explores
 
@@ -35,23 +35,19 @@ Human authority
 Merge / release
 ```
 
-## Repository plan
+## Public guides
 
-```text
-docs/
-  architecture.md
-  getting-started.md
-  github.md
-  runners.md
-  ai-workflow.md
+### [Architecture](docs/architecture.md)
+A simple public model for organizing one Windows PC as an AI-assisted engineering environment.
 
-examples/
-  github-actions/
-  powershell/
-  prompts/
-```
+### [Getting Started](docs/getting-started.md)
+A generic starting path for a safe local setup.
 
-The repository will grow from small, safe examples rather than copied production code.
+### [Self-Hosted Runner Governance](docs/runner-governance.md)
+How to classify jobs, control admission, avoid duplicate work, protect verification, and handle runner-offline states without exposing real infrastructure.
+
+### [Fast Check Workflow Example](examples/github-actions/self-hosted-fast-check.yml)
+A fictional GitHub Actions example using documentation-only runner labels.
 
 ## Writing
 
